@@ -8,9 +8,14 @@
         
 <h1>Lab 2 </h1>
 
-<img width="1382" src="https://github.com/user-attachments/assets/9cf211be-ad17-40b9-a48c-df65ea006717">
-<img width="1382" src="https://github.com/user-attachments/assets/56c78070-80c1-4367-9ca8-f670a0db7475">
+<img width="1382" src="https://github.com/user-attachments/assets/37b1e34f-f40a-40f4-bec4-11549f995468">
+<img width="1382" src="https://github.com/user-attachments/assets/205fbb0a-84d3-4287-a03a-09db70b71aca">
 
-<img width="1382" src="https://github.com/user-attachments/assets/4c133313-aafb-4225-94cd-6859540dd50c">
+<img width="1382" src="https://github.com/user-attachments/assets/4973cae8-cdd0-4357-8f0f-5bd59b6d8435">
+<img width="1382" src="https://github.com/user-attachments/assets/7dc20670-f578-487e-8330-8b90c5592fee">
+![image](https://github.com/user-attachments/assets/37b1e34f-f40a-40f4-bec4-11549f995468)
+
+
+
 
 
