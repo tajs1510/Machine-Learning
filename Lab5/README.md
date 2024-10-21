@@ -19,8 +19,10 @@ Bài 2:
   2. Thuật toán:
      - *Support Vector Machine (SVM)** để phân loại dữ liệu, bằng cách sử dụng **Quadratic Programming (QP)** để tìm nghiệm tối ưu.
   3. Kết quả:
-     
-    ![image](https://github.com/user-attachments/assets/5018c58a-b2ff-458e-8342-401ec6933a06)
+
+     - ![image](https://github.com/user-attachments/assets/be68089d-7a19-40e0-bb5c-ae91bef62851)
+
+
 
 
    
