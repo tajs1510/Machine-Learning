@@ -1,0 +1,34 @@
+# Import các thư viện cần thiết
+import numpy as np
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+import tensorflow as tf
+
+# Tải và chuẩn bị dữ liệu MNIST
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+# Chuyển đổi dữ liệu đầu vào thành vector 1D và chuẩn hóa
+x_train = x_train.reshape((x_train.shape[0], 28 * 28)).astype("float32") / 255
+x_test = x_test.reshape((x_test.shape[0], 28 * 28)).astype("float32") / 255
+
+# Chuyển nhãn thành dạng one-hot
+y_train = to_categorical(y_train, 10)
+y_test = to_categorical(y_test, 10)
+
+# Xây dựng mô hình MLP
+model = Sequential()
+model.add(Dense(512, activation="relu", input_shape=(28 * 28,)))
+model.add(Dense(256, activation="relu"))
+model.add(Dense(10, activation="softmax"))
+
+# Biên dịch mô hình
+model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
+
+# Huấn luyện mô hình
+model.fit(x_train, y_train, epochs=10, batch_size=128, validation_data=(x_test, y_test))
+
+# Lưu mô hình sau khi huấn luyện xong
+model.save("mnist_mlp_model.h5")
+print("Model đã được lưu thành công.")
