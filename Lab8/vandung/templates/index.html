@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KNN Model Evaluation</title>
+</head>
+<body>
+    <h1>KNN Model Evaluation</h1>
+
+    <h2>Sample Data</h2>
+    <div>{{ sample_data | safe }}</div>
+    <p><strong>Labels:</strong> {{ sample_labels }}</p>
+
+    <h2>Model Evaluation</h2>
+    <table border="1">
+        <tr>
+            <th>Confusion Matrix</th>
+            <td>
+                {{ evaluation_results.confusion_matrix[0][0] }} {{ evaluation_results.confusion_matrix[0][1] }}<br>
+                {{ evaluation_results.confusion_matrix[1][0] }} {{ evaluation_results.confusion_matrix[1][1] }}
+            </td>
+        </tr>
+        <tr><th>Accuracy</th><td>{{ evaluation_results.accuracy | round(2) }}</td></tr>
+        <tr><th>Recall</th><td>{{ evaluation_results.recall | round(2) }}</td></tr>
+        <tr><th>Specificity</th><td>{{ evaluation_results.specificity | round(2) }}</td></tr>
+        <tr><th>Precision</th><td>{{ evaluation_results.precision | round(2) }}</td></tr>
+        <tr><th>F1 Score</th><td>{{ evaluation_results.f1_score | round(2) }}</td></tr>
+    </table>
+</body>
+</html>

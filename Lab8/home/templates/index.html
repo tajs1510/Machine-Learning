@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KNN Model Metrics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .metrics {
+            font-size: 1.2em;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Performance of KNN Model</h1>
+    <div class="metrics">
+        <p>Accuracy: {{ accuracy }}</p>
+        <p>Recall: {{ recall }}</p>
+        <p>Precision: {{ precision }}</p>
+    </div>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Metrics plot">
+</body>
+</html>
