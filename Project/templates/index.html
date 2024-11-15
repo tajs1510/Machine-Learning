@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>CIFAR-10 Image Recognition</h1>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Upload Image</button>
+    </form>
+
+    {% if image_data %}
+        <div>
+            <h3>Predicted Class: {{ class_name }}</h3>
+            <h4>Confidence: {{ confidence | round(2) }}</h4>
+            <h5>Uploaded Image:</h5>
+            <img src="data:image/png;base64,{{ image_data }}" alt="Uploaded Image" width="200">
+        </div>
+    {% endif %}
+</body>
+</html>
